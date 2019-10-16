@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        ul { padding: 0; margin: 0; }
+        #imagin-play{
+            /*position:relative;*/
+            margin: 50px auto 0;
+            width: 400px;
+            height: 430px;
+            /*background-color: deepskyblue;*/
+            /*overflow: hidden;*/
+        }
+        .big-pic{
+            width: 400px;
+            height: 300px;
+            margin: auto 0;
+            overflow: hidden;
+            position: relative;
+            border-bottom: 1px solid #ccc;
+        }
+        .big-pic li{
+            width: 400px;
+            height: 300px;
+            z-index: 0;
+             overflow: hidden;
+        }
+        .small-pic{
+            width: 400px;
+            height: 130px;
+            overflow: hidden;
+            top: 7px; left: 10px;
+
+        }
+
+        .big-pic .prev{
+            /**/
+            position: absolute; top: 130px; left: 10px;
+            /*margin-top: -200px;*/
+            width: 60px;
+            height: 60px;
+            float: left;
+            background: black;
+            opacity: 0.5;
+            filter:alpha(opacity=50)
+            /*还是那句话
+          整不明白就用absolute直接定位*/
+        }
+        .big-pic .next{
+            /**/
+            position: absolute; top: 130px; right: 10px;
+            /*margin-top: -200px;*/
+            width: 60px;
+            height: 60px;
+            float: left;
+            background: black;
+            opacity: 0.5;
+            filter:alpha(opacity=50)
+            /*还是那句话
+          整不明白就用absolute直接定位*/
+        }
+        .big-pic .text { position: absolute; left: 10px; bottom: 4px; z-index: 3000; color: #ccc; }
+        .big-pic .length { position: absolute; right: 10px; bottom: 4px; z-index: 3000; color: #ccc; }
+        .small-pic ul{height:94px;position:absolute;}
+        .small-pic li{height: 94px; width: 120px;float: left;ursor: pointer; filter: alpha(opacity=60); opacity: 0.6;}
+        .small_pic img { width: 120px; height: 94px; }
+    </style>
+</head>
+<body>
+<div id="imagin-play">
+   <ul class="big-pic">
+       <div class="prev"></div>
+       <div class="next"></div>
+       <div class="text">加载图片说明……</div>
+       <div class="length">计算图片数量……</div><!--<-解释文字-->
+
+      <li><img src="imagine/下载.jpg" /></li>
+      <li><img src="imagine/下载.gif" /> </li>
+      <li><img src="imagine/下载%20(2).jpg" /></li><!--//大型图片-->
+
+   </ul>
+    <ul class="small-pic">
+
+        <li><img src="imagine/下载.jpg"></li>
+        <li><img src="imagine/下载.gif"> </li>
+        <li><img src="imagine/下载%20(2).jpg"></li><!--//小型图片-->
+
+
+    </ul>
+
+
+</div>
+
+</body>
+</html>
